@@ -27,9 +27,16 @@ const HomePage = () => {
           Authorization: `Bearer ${token}`,
         },
       })
-      .then(() => setPosts(posts.filter((post) => post._id !== id)))
+      .then(() => {
+        setPosts(posts.filter((post) => post._id !== id));
+      })
       .catch((error) => {
         console.error("Error deleting post:", error);
+        if (error.response && error.response.data) {
+          window.alert(error.response.data.message); // Show error message in alert dialog
+        } else {
+          window.alert("An error occurred while deleting the post.");
+        }
       });
   };
 

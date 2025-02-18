@@ -348,3 +348,12 @@ code {
 .login-link a:hover {
   text-decoration: underline;
 }
+
+/* .error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-weight: bold;
+} */
